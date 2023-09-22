@@ -26,10 +26,13 @@ p {
 .sanity-check {
   margin-top: 0;
 }
+.main-content {
+  width: 100%;
+  height: 100%;
+}
 .input-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 350px;
   padding-bottom: 8px;
   font-size: 12px;
 }

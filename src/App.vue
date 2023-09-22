@@ -1,23 +1,25 @@
 <template>
-  <section>
-    <h1 class="header">{{ mortgageCalcTitle }} ${{ payment.toFixed(2) }}</h1>
-    <p class="sanity-check">** Sanity check: 200k at 8% = $1468</p>
-  </section>
-  <section>
-    <h1>{{ inputHeader }}</h1>
-    <div class="input-content" v-for="item in userInputs">
-      <label>{{ item.label }}</label>
-      <input :type="(item.type)" v-model="item.amount">
-    </div>
-  </section>
-  <section>
-    <h1>{{ resultsHeader }}</h1>
-    <div class="input-content" v-for="item in results">
-      <label>{{ item.label }}</label>
-      <div>{{ USDollar.format(item.amount) }}</div>
-    </div>
-  </section>
-  <p>{{ notes }}</p>
+  <div class="main-content">
+    <section>
+      <h1 class="header">{{ mortgageCalcTitle }} ${{ payment.toFixed(2) }}</h1>
+      <p class="sanity-check">** Sanity check: 200k at 8% = $1468</p>
+    </section>
+    <section>
+      <h1>{{ inputHeader }}</h1>
+      <div class="input-content" v-for="item in userInputs">
+        <label>{{ item.label }}</label>
+        <input :type="(item.type)" v-model="item.amount">
+      </div>
+    </section>
+    <section>
+      <h1>{{ resultsHeader }}</h1>
+      <div class="input-content" v-for="item in results">
+        <label>{{ item.label }}</label>
+        <div>{{ USDollar.format(item.amount) }}</div>
+      </div>
+    </section>
+    <p>{{ notes }}</p>
+  </div>
 </template>
 
 <script setup>
