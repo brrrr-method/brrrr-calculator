@@ -41,6 +41,7 @@ p {
   }
   input {
     grid-column: 3/3;
+    touch-action: none;
   }
   div {
     grid-column: 3/3;
